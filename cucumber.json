@@ -1,0 +1,18 @@
+{
+
+"default":{
+    "formateOptions":{
+"snippetInterface": "async-await"
+    },
+    "paths":[
+        "tests/features/ScenarioOutline.feature"
+    ],
+    "publishQuite": true,
+    "dryRun": false,
+    "require":[
+        "tests/steps/*.js"
+    ]
+
+}
+
+}

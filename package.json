@@ -1,0 +1,20 @@
+{
+  "name": "poc-bdd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+      "test": "cucumber-js test"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.47.0",
+    "@types/node": "^22.5.4"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^11.0.0"
+  }
+}
