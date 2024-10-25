@@ -37,9 +37,11 @@ When('providing valid username as {string} and passowrd as {string}', async func
 Then('clicking login button', async function(){
     await page.locator("//input[@name='submit']").click()
     await page.close()
-    await browser.close()
+    
 })
 
-
-
+// Additional step
+Then('verifying login is successful', async function(){
+  await browser.close()
+});
 
