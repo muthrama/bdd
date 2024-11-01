@@ -8,6 +8,5 @@ And verifying login is successful
 
 Examples:
 | name | password |
-| mercury | mercury |
 | jupiter | jupiter |
 | mars | mars |

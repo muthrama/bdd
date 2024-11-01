@@ -11,14 +11,18 @@ Given('providing valid url', async function(){
     setDefaultTimeout(10000)
     await page.goto("https://demo.guru99.com/test/newtours/")
 
+     // Print the current URL for debugging
+  console.log('Current URL:', page.url());
+
     // Assert that the page title is correct
-  await expect(page).toHaveTitle('Welcome: Mercury Tours');
+  await expect(page).toHaveTitle('Welcome: Mercury Tours'); 
+
+  // Add a short delay to ensure the page has fully loaded
+  await page.waitForTimeout(2000);
 
   // Assert that the page URL is correct
-  //await expect(page).toHaveURL('https://demo.guru99.com/test/newtours/');
+  await expect(page).toHaveURL('https://demo.guru99.com/test/newtours/');
 
-  // Assert that the page has a certain text
-  //await expect(page).toHaveText('Registered users can sign-in here');
 
 
 
@@ -35,13 +39,13 @@ When('providing valid username as {string} and passowrd as {string}', async func
 })
 
 Then('clicking login button', async function(){
-    await page.locator("//input[@name='submit']").click()
-    await page.close()
+    await page.locator("//input[@name='submit']").click()   
     
 })
 
-// Additional step
+// This Then means "And" in the Gherkin language
 Then('verifying login is successful', async function(){
-  await browser.close()
+  await expect(page.locator('text=Login Successfully')).toBeVisible();
+  await page.close();
+  await browser.close();
 });
-
