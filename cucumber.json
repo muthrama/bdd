@@ -5,7 +5,7 @@
 "snippetInterface": "async-await"
     },
     "paths":[
-        "tests/features/automationtesting.feature"
+        "tests/features/workshop-browser.feature"
     ],
     "publishQuite": true,
     "dryRun": false,
